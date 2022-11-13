@@ -1,19 +1,31 @@
 import random
 
-score_dice = []
+initial_score_dice = []
+current_score = []
+roll = []
 
 def roll_dice():
-    die = random.randint(1, 5)
-    return die
+    die1 = random.randint(1, 5)
+    initial_score_dice.append(die1)
+    die2 = random.randint(1, 5)
+    initial_score_dice.append(die2)
+    die3 = random.randint(1, 5)
+    initial_score_dice.append(die3)
+    die4 = random.randint(1, 5)
+    initial_score_dice.append(die4)
+    die5 = random.randint(1, 5)
+    initial_score_dice.append(die5)
 
-number_of_times_rolled = 0
-
-while number_of_times_rolled < 5:
-    roll = roll_dice()
-    score_dice.append(roll)
-    number_of_times_rolled += 1
-
-print(score_dice)
+roll = roll_dice()
+for i in initial_score_dice:
+    if initial_score_dice.index(i) == 1 or initial_score_dice.index(i) == 5:
+        print("You have a scoring roll!")
+        print(initial_score_dice)
+        break
+    else:
+        print(initial_score_dice)
+        print("You Farkled! Better luck next time")
+        break
 
 
 
