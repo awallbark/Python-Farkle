@@ -17,11 +17,11 @@ def roll_dice():
     initial_roll.append(die5)
 
 roll = roll_dice()
-if initial_score_dice.index(1) or initial_score_dice.index(5):
+if initial_roll.index(1) or initial_roll.index(5):
     print("You have a scoring roll!")
-    print(initial_score_dice)
+    print(initial_roll)
 else:
-    print(initial_score_dice)
+    print(initial_roll)
     print("You Farkled! Better luck next time")
 
 
