@@ -3,7 +3,7 @@ import random
 
 initial_roll = []
 current_score = 0
-game_rounds = []
+#game_rounds = {"round": <value>}
 ones_counter = 0
 twos_counter = 0
 threes_counter = 0
@@ -12,16 +12,23 @@ fives_counter = 0
 sixes_counter = 0
 
 def roll_dice():
-    die1 = random.randint(1, 6)
-    initial_roll.append(die1)
-    die2 = random.randint(1, 6)
-    initial_roll.append(die2)
-    die3 = random.randint(1, 6)
-    initial_roll.append(die3)
-    die4 = random.randint(1, 6)
-    initial_roll.append(die4)
-    die5 = random.randint(1, 6)
-    initial_roll.append(die5)
+    die_count = 0
+    while die_count <= 5:
+        die = random.randint(1,6)
+        initial_roll.append(die)
+        die_count += 1
+
+#first way of writing the random die
+    # die1 = random.randint(1, 6)
+    # initial_roll.append(die1)
+    # die2 = random.randint(1, 6)
+    # initial_roll.append(die2)
+    # die3 = random.randint(1, 6)
+    # initial_roll.append(die3)
+    # die4 = random.randint(1, 6)
+    # initial_roll.append(die4)
+    # die5 = random.randint(1, 6)
+    # initial_roll.append(die5)
 
 
 roll = roll_dice()
