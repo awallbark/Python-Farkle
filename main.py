@@ -33,7 +33,7 @@ def roll_dice():
 
 roll = roll_dice()
 
-if initial_roll.count(1) or initial_roll.count(5):
+if initial_roll.count(1) or initial_roll.count(5) or initial_roll.count(2) >= 3 or initial_roll.coun(3) >= 3 or initial_roll.count(4) >= 3 or initial_roll.count(6) >= 3:
     print("You have a scoring roll!")
     print(initial_roll)
     for a in initial_roll:
