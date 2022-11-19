@@ -52,7 +52,6 @@ class Score():
         else:
                 print("You Farkled! Better luck next time")
                 print(roll)
-                print(dice_number)
         return dice_number
 
     def score_dice(self, arg):
