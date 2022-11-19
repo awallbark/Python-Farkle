@@ -1,54 +1,10 @@
-import random
-
-
-roll = []
+import ScoreClass
 
 #game_rounds = {"round": <value>}
 
 
-def roll_dice():
-    die_count = 0
-    while die_count <= 5:
-        die = random.randint(1, 6)
-        roll.append(die)
-        die_count += 1
-
-
-turn = roll_dice()
-
-def count_dice(turn):
-    dice_number = {}
-    ones_counter = 0
-    twos_counter = 0
-    threes_counter = 0
-    fours_counter = 0
-    fives_counter = 0
-    sixes_counter = 0
-    if roll.count(1) or roll.count(5) or roll.count(2) >= 3 or roll.count(3) >= 3 or roll.count(4) >= 3 or roll.count(6) >= 3:
-        print("You have a scoring roll!")
-        print(roll)
-        for a in roll:
-            if a == 1:
-                ones_counter += 1
-                dice_number.update({"ones": ones_counter})
-            elif a == 2:
-                twos_counter += 1
-                dice_number.update({"twos": twos_counter})
-            elif a == 3:
-                threes_counter += 1
-                dice_number.update({"threes": threes_counter})
-            elif a == 4:
-                fours_counter += 1
-                dice_number.update({"fours": fours_counter})
-            elif a == 5:
-                fives_counter += 1
-                dice_number.update({"fives": fives_counter})
-            elif a == 6:
-                sixes_counter += 1
-                dice_number.update({"sixes": sixes_counter})
-        print(dice_number)
-        return dice_number
-
+turn = ScoreClass.Score()
+print(turn.roll_dice())
 
 def score_dice(dice_number):
     current_score = 0
@@ -62,6 +18,8 @@ def score_dice(dice_number):
             current_score += 2000
         if k == "ones" and v == 4 or k == "twos" and v == 4 or k == "threes" and v == 4 or k == "fours" and v == 4 or k == "fives" and v == 4 or k == "sixes" and v == 4:
             current_score += 1000
+        if k == "ones" and v == 3 and k == "twos" and v == 3:
+            current_score += 2500
         if k == "ones" and v == 1:
             current_score += 100
         elif k == "ones" and v == 2:
@@ -110,8 +68,8 @@ def score_dice(dice_number):
     #         print("You Farkled! Better luck next time")
     #         print(roll)
 
-count_dice = count_dice(turn)
-score_dice(count_dice)
+# count_dice = count_dice(turn)
+# score_dice(count_dice)
 
 
 
