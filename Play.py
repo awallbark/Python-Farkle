@@ -19,22 +19,30 @@ import random
 #
 # print(current_score)
 
-initial_roll = {}
+# initial_roll = {}
+#
+# def roll_dice():
+#     die1 = random.randint(1, 5)
+#     initial_roll.update({"die1": die1})
+#     die2 = random.randint(1, 5)
+#     initial_roll.update({"die2": die2})
+#     die3 = random.randint(1, 5)
+#     initial_roll.update({"die3": die3})
+#     die4 = random.randint(1, 5)
+#     initial_roll.update({"die4": die4})
+#     die5 = random.randint(1, 5)
+#     initial_roll.update({"die5": die5})
+#
+# roll_dice()
+# # print(initial_roll)
+#
+# if initial_roll.values() == 1 or initial_roll.values() == 5:
+#     print(initial_roll.values())
 
-def roll_dice():
-    die1 = random.randint(1, 5)
-    initial_roll.update({"die1": die1})
-    die2 = random.randint(1, 5)
-    initial_roll.update({"die2": die2})
-    die3 = random.randint(1, 5)
-    initial_roll.update({"die3": die3})
-    die4 = random.randint(1, 5)
-    initial_roll.update({"die4": die4})
-    die5 = random.randint(1, 5)
-    initial_roll.update({"die5": die5})
+##want a player a round and a score in a dictionary
+round_info = {}
+round_info["Player Info"] = ["Player Name"]
+round_info["Round"] = ["Round"]
+round_info["Score"] = ["Score"]
 
-roll_dice()
-# print(initial_roll)
-
-if initial_roll.values() == 1 or initial_roll.values() == 5:
-    print(initial_roll.values())
+print(round_info)
