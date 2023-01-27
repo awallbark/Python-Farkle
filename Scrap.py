@@ -90,3 +90,10 @@ import random
 #         current_score += 2000
 #     elif dice_number.fromkeys("ones", 6):
 #         current_score += 3000
+
+roll = {'ones': 2, 'sixes': 2, 'fours': 1, 'twos': 2}
+counter = 0
+for v in roll.items():
+
+
+
