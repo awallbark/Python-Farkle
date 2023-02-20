@@ -95,17 +95,6 @@ class Score():
             #Straight 1 of each number
             if k == "ones" and v == 1 and k == "twos" and v == 1 and k == "threes" and v == 1 and k == "fours" and v == 1 and k == "fives" and v == 1 and k == "sixes" and v == 1:
                 current_score += 1500
-                #six of a kind
-            # if v == 6:
-            #     current_score += 3000
-            #     #five of a kind
-            # if v == 5:
-            #     current_score += 2000
-            #     #four of a kind
-            # if v == 4:
-            #     current_score += 1000
-            # if k == "ones" and v == 3 and k == "twos" and v == 3:
-            #     current_score += 2500
             if k == "ones" and v == 1:
                 current_score += 100
             elif k == "ones" and v == 2:
