@@ -90,11 +90,17 @@ class Score():
 
     def score_dice(self, arg):
         current_score = 0
+        singles_count = 0
 
         for k, v in arg.items():
-            #Straight 1 of each number
-            if k == "ones" and v == 1 and k == "twos" and v == 1 and k == "threes" and v == 1 and k == "fours" and v == 1 and k == "fives" and v == 1 and k == "sixes" and v == 1:
+            #Straight: 1 of each number
+            if v == 1:
+                singles_count += 1
+                while singles_count < 6:
+                    singles_count += 1
+            if singles_count == 6:
                 current_score += 1500
+                break
             if k == "ones" and v == 1:
                 current_score += 100
             elif k == "ones" and v == 2:
@@ -111,7 +117,6 @@ class Score():
                 current_score += 100
             elif k == "fives" and v == 3:
                 current_score += 500
-                current_score += 3000
             if k == "sixes" and v == 3:
                 current_score += 600
         print(current_score)
