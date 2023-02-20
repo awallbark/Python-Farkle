@@ -61,7 +61,7 @@ class Score():
         dice_count_pairs = 0
         #dice_count_four_of_a_kind_and_a_pair = 0
 
-        for v in arg.items():
+        for v in arg.values():
             if v == 6:
                 score += 3000
                 break
@@ -71,16 +71,19 @@ class Score():
                 score += 1500
             elif v == 4:
                 score = 1000
-
-            while dice_count_triplets < 2:
-                if v == 3:
-                    dice_count_triplets += 1
-                elif dice_count_triplets == 2:
-                    score += 2500
-            while dice_count_pairs < 3:
-                if v == 2:
-                    dice_count_pairs += 1
-                elif dice_count_pairs == 3:
+            elif v == 3:
+                dice_count_triplets += 1
+                while dice_count_triplets < 2:
+                    if v == 3:
+                        dice_count_triplets += 1
+                if dice_count_triplets == 2:
+                    score += 1500
+            elif v == 2:
+                dice_count_pairs += 1
+                while dice_count_pairs < 3:
+                    if v == 2:
+                        dice_count_pairs += 1
+                if dice_count_pairs == 3:
                     score += 1500
 
             return score
