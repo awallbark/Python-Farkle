@@ -95,5 +95,16 @@ roll = {'ones': 2, 'sixes': 2, 'fours': 1, 'twos': 2}
 counter = 0
 for v in roll.items():
 
+# while dice_count_triplets <= 2:
+#     if dice_count_triplets == 1 and v == 3:
+#         dice_count_triplets += 1
+#     elif dice_count_triplets == 2:
+#         score += 2500
+#     break
+# while dice_count_pairs <= 3:
+#     if dice_count_pairs >= 1 and v == 2:
+#         dice_count_pairs += 1
+#     elif dice_count_pairs == 3:
+#         score += 1500
 
 
