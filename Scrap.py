@@ -107,4 +107,16 @@ for v in roll.items():
 #     elif dice_count_pairs == 3:
 #         score += 1500
 
+# six of a kind
+# if v == 6:
+#     current_score += 3000
+#     #five of a kind
+# if v == 5:
+#     current_score += 2000
+#     #four of a kind
+# if v == 4:
+#     current_score += 1000
+# if k == "ones" and v == 3 and k == "twos" and v == 3:
+#     current_score += 2500
+
 
